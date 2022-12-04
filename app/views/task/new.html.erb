@@ -1,0 +1,39 @@
+<h1> New task</h1>
+
+<%= form_with scope: :task, url: create_task_path, local: true do |f| %>
+  
+  <p>
+    <% if @task.errors.any? %>
+      <ul>
+        <% @task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+
+    <% end %>
+
+  </p>
+
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+  
+  
+  <p>
+    <%= f.label :details %><br/>
+    <%= f.text_field :details %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+
+<div>
+  <%= link_to "Back to task", user_task_index_path %>
+</div>
+
+ 

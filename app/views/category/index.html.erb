@@ -8,6 +8,7 @@
     <div class="category">
       <h2><%= category.name %></h2>
       <h2><%= category.details %></h2>
+      <%= link_to "Show category", show_category_path(@category) %>
     </div>
   <% end %>
   </div>

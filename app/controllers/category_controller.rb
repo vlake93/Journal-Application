@@ -17,6 +17,10 @@ class CategoryController < ApplicationController
     end
   end
 
+  def show
+    @category = current_user.category.find(params[:id])
+  end
+
   private
 
   def get_category
@@ -24,6 +28,6 @@ class CategoryController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:name, :details, :user_id)
+    params.require(:category).permit(:name, :details, :user_id, :id)
   end
 end
