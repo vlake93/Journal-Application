@@ -1,0 +1,18 @@
+<nav class="home-nav">
+<div class="user-container">
+  <h2><%= current_user.email %></h2>
+</div>
+<div class="button-container">
+  <div class="nav-buttons">
+    <%= image_tag("category.png", :alt => "category logo") %>
+    <%= link_to "Category", category_index_path(@category) %>
+  </div>
+  <div class="nav-buttons">
+    <%= image_tag("task.png", :alt => "task logo") %>
+    <%= link_to "Task", category_index_path(@task) %>
+  </div>
+</div>
+<div class="signout-container">
+  <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
+</div>
+</nav>

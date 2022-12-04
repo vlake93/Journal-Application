@@ -1,0 +1,119 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding: 10rem 10rem 0 10rem;
+  background: url("small.png");
+  background-size: cover;
+  position: relative;
+
+  & .sign-in {
+    margin-top: 10rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    background-color: black;
+    height: 55rem;
+    width: 55rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: url("signin.jpg");
+    background-size: cover;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .heading {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    pointer-events: none;
+    color: rgb(220, 173, 123);
+    font-family: 'La Belle Aurore', cursive;
+
+    // -webkit-text-stroke: .5px white;
+    animation: from-left 3s forwards;
+
+    &-second {
+      margin-left: 20rem;
+    }
+    
+    & .boligrafo {
+      position: absolute;
+      top: 2rem;
+      right: -86rem;
+      font-size: 12rem;
+      margin-left: 20rem;
+      font-family: 'La Belle Aurore', cursive;
+      animation: appear 8s forwards;
+    }
+
+    & h3 {
+      font-size: 5rem;
+    }
+  }
+
+  .dot {
+    font-size: 7 rem;
+  }
+
+  .dot-one {
+    animation: appear 4.25s forwards;
+  }
+  .dot-two {
+    animation: appear 5.25s forwards;
+  }
+  .dot-three {
+    animation: appear 6.25s forwards;
+  }
+
+  & .landing-footer {
+    background-color: rgb(220, 173, 123);
+    height: 10rem;
+    width: 100vw;
+    color: white;
+
+    & p {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes from-left {
+  70% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+}

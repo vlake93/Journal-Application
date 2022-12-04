@@ -1,0 +1,14 @@
+<div class="categories">
+  <div class="categories-header">
+    <h1>Categories</h1>
+    <%= link_to "New Category", new_user_category_path(current_user) %>
+  </div>
+  <div class="categories-holder">
+  <% @category.each do |category| %>
+    <div class="category">
+      <h2><%= category.name %></h2>
+      <h2><%= category.details %></h2>
+    </div>
+  <% end %>
+  </div>
+</div>
