@@ -17,6 +17,10 @@ class TaskController < ApplicationController
     end
   end
 
+  def show
+    @task = category.task.find(params[:id])
+  end
+
   private
 
   def get_task
@@ -24,6 +28,6 @@ class TaskController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :details, :category_id)
+    params.require(:task).permit(:name, :details, :category_id, :id)
   end
 end
