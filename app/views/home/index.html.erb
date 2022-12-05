@@ -16,11 +16,13 @@
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
   </div>
  </nav>
- <div>
+ <div class="renders">
+
+ <div class="home-category">
   <%= render template: "category/index" %>
-      <%= link_to "New Category", new_user_category_path(current_user) %>
  </div>
- <div>
-  <%= render template: "task/index" %>
+ <div class"home-today">
+  Put today's task here
+ </div>
  </div>
 </div>

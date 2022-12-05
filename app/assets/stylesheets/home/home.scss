@@ -4,9 +4,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 5rem;
+  
 
-  & nav {
+  & .renders {
+    padding: 5rem;
+    // background: url('home.jpg');
+    background: url('home2.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 37rem;
+    padding-bottom: 25rem;
+  }
+ 
+
+  &-nav {
     color: white;
     padding: .5rem 3rem 3rem 3rem;
     width: 15vw;
@@ -16,6 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
 
     & button {
       font-size: 2.5rem;

@@ -21,13 +21,34 @@ class CategoryController < ApplicationController
     @category = current_user.category.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+    if @category.update(category_params)
+     redirect_to unauthenticated_root_path, notice: "Category was successfully updated."
+    else
+      render :edit
+    end
+  end
+
+def destroy
+  @category.destroy
+
+  redirect_to unauthenticated_root_path, notice: "Category was successfully deleted." 
+end
+
   private
 
   def get_category
-    @category = Category.find(params[:user_id])
+    @category = current_user.category.find(params[:user_id])
   end
 
   def category_params
     params.require(:category).permit(:name, :details, :user_id, :id)
+  end
+
+  def task
+    @task = task.find(params[:category_id])
   end
 end

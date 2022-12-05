@@ -3,12 +3,8 @@ class TaskController < ApplicationController
     @task = category.task.all
   end
 
-  # def new
-  #   @task = category.task.new
-  # end
-
   def new
-    @task = Category.find(params[:category_id])
+    @task = category.task.new
   end
 
   def create
@@ -26,6 +22,10 @@ class TaskController < ApplicationController
   end
 
   private
+
+  def category
+    Category.find(params[:category_id])
+  end
 
   def get_task
     @task = task.find(params[:category_id])
