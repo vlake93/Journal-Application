@@ -24,6 +24,11 @@
     <%= f.label :details %><br/>
     <%= f.text_field :details %>
   </p>
+
+  <p>
+    <%= f.label :date %><br/>
+    <%= f.date_field :date %>
+  </p>
   
   <p>
     <%= f.submit %>
@@ -33,7 +38,7 @@
 
 
 <div>
-  <%= link_to "Back to category", user_category_task_index_path %>
+  <%= link_to "Home", authenticated_root_path %>
 </div>
 
  

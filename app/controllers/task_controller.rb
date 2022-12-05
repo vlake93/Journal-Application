@@ -1,14 +1,14 @@
 class TaskController < ApplicationController
   def index
-    @task = category.task.all
+    @task = category.tasks.all
   end
 
   def new
-    @task = category.task.new
+    @task = category.tasks.new
   end
 
   def create
-    @task = category.task.create(task_params)
+    @task = category.tasks.create(task_params)
 
     if @task.save
       redirect_to unauthenticated_root_path
@@ -18,7 +18,7 @@ class TaskController < ApplicationController
   end
 
   def show
-    @task = category.task.find(params[:id])
+    @task = category.tasks.find(params[:id])
   end
 
   private
@@ -28,10 +28,10 @@ class TaskController < ApplicationController
   end
 
   def get_task
-    @task = task.find(params[:category_id])
+    @task = tasks.find(params[:category_id])
   end
 
   def task_params
-    params.require(:task).permit(:name, :details, :category_id, :id)
+    params.require(:task).permit(:name, :details, :category_id, :id, :date)
   end
 end

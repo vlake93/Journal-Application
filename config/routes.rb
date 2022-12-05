@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/user/:user_id/category/:id' => 'category#show', as: 'show_category'
   patch 'category/:id', to: 'category#update'
   post 'user/:user_id/category/:category_id/task' => 'task#create', as: "create_task"
-  delete 'category/:id' => 'category#destroy', as: "delete_category"
+  delete '/user/:user_id/category/:id' => 'category#destroy', as: "delete_category"
 
   # Defines the root path route ("/")
   devise_for :users

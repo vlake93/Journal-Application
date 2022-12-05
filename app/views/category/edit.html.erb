@@ -1,12 +1,11 @@
 <div class="edit-container">
 <h1>Editing Category</h1>
 
-<%= render "form", category: @category %>
+<%= render "form", category: @category, user: @current_user %>
 
 <br>
 
 <div class="edit-btn">
-  <%= link_to "Show this category", @category %> |
   <%= link_to "Back to category", authenticated_root_path %>
 </div>
 <div>
