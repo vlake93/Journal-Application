@@ -26,7 +26,6 @@ class CategoryController < ApplicationController
   end
 
   def update
-
     if @category.update(category_params)
      redirect_to unauthenticated_root_path, notice: "Category was successfully updated."
     else
@@ -36,7 +35,6 @@ class CategoryController < ApplicationController
 
 def destroy
   @category.destroy
-
   redirect_to unauthenticated_root_path, notice: "Category was successfully deleted." 
 end
 

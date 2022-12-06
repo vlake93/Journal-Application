@@ -1,5 +1,5 @@
 class TaskController < ApplicationController
-  
+  before_action :get_task, only: %i[show edit update destroy]
 
   def index
     @task = category.tasks.all
@@ -20,11 +20,20 @@ class TaskController < ApplicationController
   end
 
   def show
-    @task = category.tasks.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @task.update(task_params)
+     redirect_to unauthenticated_root_path, notice: "Task was successfully updated."
+    else
+      render :edit
+    end
   end
 
 def destroy
-  debugger
   @task.destroy(task_params)
   redirect_to unauthenticated_root_path, notice: "Task was successfully deleted." 
 end
@@ -36,7 +45,7 @@ end
   end
 
   def get_task
-    @task = tasks.find(params[:category_id])
+    @task = Category.find(params[:category_id])
   end
 
   def task_params

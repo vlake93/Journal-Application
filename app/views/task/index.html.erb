@@ -10,8 +10,8 @@
       <h2><%= task.date %></h2>
     </div>
     <div>
-    <%= link_to "Edit", edit_user_category_task_path(@category, task) %>
-    <%= link_to "Delete", delete_task_path(@category, task), class: "delete-category", data: { "turbo_method": "delete", "turbo_confirm": "Are you sure you want to delete this category? This can't be undone." } %>
+    <%= link_to "Edit", edit_user_category_task_path(current_user, @category, task) %>
+    <%= link_to "Delete", delete_task_path(@category, task), class: "delete-task", data: { "turbo_method": "delete", "turbo_confirm": "Are you sure you want to delete this task? This can't be undone." } %>
     </div>
     </div>
     <% end %>
