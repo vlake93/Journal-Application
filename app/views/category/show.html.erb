@@ -1,9 +1,11 @@
-<h1>Show category</h1>
-
-<%= render "category/category" %>
-<%= render template: "task/index", locals: { tasks: @category.tasks } %>
-
-<div class="home-btn">
-  <%= link_to "Home", authenticated_root_path %>
+<div class="category-show">
+  <%= render partial: "home/nav-category" %>
+  <div>
+    <h1>Show category</h1>
+    <%= render "category/category" %>
+    <%= render template: "task/index", locals: { tasks: @category.tasks } %>
+    <div class="home-btn">
+      <%= link_to "Home", authenticated_root_path %>
+    </div>
+  </div>
 </div>
-

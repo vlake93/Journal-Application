@@ -1,10 +1,8 @@
-<div class="home">
- <nav class="home-nav">
+<nav class="home-nav">
   <div class="user-container">
     <h2><%= current_user.name  %>'s Journal</h2>
-  </div>
-  <div class="button-container">
-  <h2>You have: <%= current_user.categories.count  %> categories</h2>
+    </div>
+    <div class="button-container">
     <div class="nav-buttons">
       <%= image_tag("category.png", :alt => "category logo") %>
       <%= link_to "Category", user_category_index_path(current_user) %>
@@ -12,18 +10,11 @@
     <div class="nav-buttons">
       <%= image_tag("task.png", :alt => "task logo") %>
     </div>
+    <h2> <%= @category.name  %></h2>
+    <h2>This category has: <%= @category.tasks.count  %> tasks</h2>
+    
   </div>
   <div class="signout-container">
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
   </div>
  </nav>
- <div class="renders">
-
- <div class="home-category">
-  <%= render template: "category/index" %>
- </div>
- <div class"home-today">
-  Put today's task here
- </div>
- </div>
-</div>

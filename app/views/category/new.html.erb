@@ -1,3 +1,10 @@
+
+<div class="category-new">
+
+<div>
+ <%= render partial: "home/nav" %>
+</div>
+<div>
 <h1> New category</h1>
 
 <%= form_with scope: :category, url: create_category_path, local: true do |f| %>
@@ -35,5 +42,5 @@
 <div>
   <%= link_to "Back to category", authenticated_root_path %>
 </div>
-
- 
+</div>
+</div>
