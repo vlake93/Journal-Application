@@ -1,0 +1,10 @@
+<div class="category-edit">
+  <%= render partial: "home/nav-task" %>
+  <div class="edit-container">
+    <h1>Editing task</h1>
+    <%= render "form", task: @task, category: @category %>
+    <div class="edit-btn">
+      <%= link_to "Back to task", authenticated_root_path %>
+    </div>
+  </div>
+</div>

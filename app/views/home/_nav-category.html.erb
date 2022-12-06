@@ -5,14 +5,17 @@
     <div class="button-container">
     <div class="nav-buttons">
       <%= image_tag("category.png", :alt => "category logo") %>
-      <%= link_to "Category", user_category_index_path(current_user) %>
+      <%= link_to "Home", authenticated_root_path %>
     </div>
     <div class="nav-buttons">
       <%= image_tag("task.png", :alt => "task logo") %>
     </div>
-    <h2> <%= @category.name  %></h2>
-    <h2>This category has: <%= @category.tasks.count  %> tasks</h2>
-    
+      <% if @category.name == nil %>
+      <h2>Creating a new category for <%= current_user.name %></h2>
+      <% else %>
+      <h2><%= @category.name  %> has: <%= @category.tasks.count  %> tasks</h2>
+      <% end %>
+
   </div>
   <div class="signout-container">
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>

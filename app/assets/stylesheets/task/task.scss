@@ -1,0 +1,15 @@
+.task-index {
+  background: image-url('note2.png');
+  background-size: cover;
+  height: 20rem;
+  width: 20rem;
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-holder {
+  display: flex;
+  gap: 2rem;
+}

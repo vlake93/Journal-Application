@@ -7,6 +7,7 @@
   <% @category.each do |category| %>
     <div class="category">
       <h2><%= category.name %></h2>
+      <h2><%= @task %></h2>
       <%= link_to "Show", show_category_path(current_user, category) %> |
       <%= link_to "Edit", edit_user_category_path(current_user, category) %> |
       <%= link_to "Delete", delete_category_path(current_user, category), class: "delete-category", data: { "turbo_method": "delete", "turbo_confirm": "Are you sure you want to delete this category? This can't be undone." } %>

@@ -1,4 +1,6 @@
 class TaskController < ApplicationController
+  
+
   def index
     @task = category.tasks.all
   end
@@ -20,6 +22,12 @@ class TaskController < ApplicationController
   def show
     @task = category.tasks.find(params[:id])
   end
+
+def destroy
+  debugger
+  @task.destroy(task_params)
+  redirect_to unauthenticated_root_path, notice: "Task was successfully deleted." 
+end
 
   private
 
