@@ -1,15 +1,29 @@
 .task-index {
-  background: image-url('note2.png');
+  background: image-url('note5.png');
   background-size: cover;
   height: 20rem;
   width: 20rem;
   // background-color: red;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+
+  & .index {
+    margin-left: 2rem;
+  }
+
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
 }
 
 .task-holder {
   display: flex;
   gap: 2rem;
 }
+
