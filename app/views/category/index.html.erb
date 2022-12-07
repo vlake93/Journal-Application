@@ -19,11 +19,13 @@
 </div>
 
 <div class="todays">
-<% @category.each do |category| %>
-  <h2><%= category.tasks.where('date = ?', Date.current).name %></h2>
-  <% if category.tasks.first != nil %>
-    <h2><%= category.tasks.first.name %></h2>
-  <% end %>
 
+<div class="todays-tasks">
+<% current_user.tasks.each do |task| %>
+  <h2><%= task.name %></h2>
+  <h2><%= task.details %></h2>
+  <h2><%= task.date %></h2>
+  <h2><%#= task.where('date = ?', Date.current).name %></h2>
     <% end %>
+    </div>
 </div>

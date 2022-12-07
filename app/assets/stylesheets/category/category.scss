@@ -4,10 +4,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 55rem;
+  // width: 55rem;
   // background-color: rgb(255, 210, 161);
   background-color: transparent;
-  margin-right: 30rem;
+  // margin-right: 30rem;
   font-family: 'Shadows Into Light', cursive;
 
   & a:link, & a:visited {
@@ -74,5 +74,19 @@
 }
 
 .todays {
+  display: flex;
+  flex-direction: column;
   padding: 3rem 3rem 3rem 0;
+  height: 60vh;
+  width: 35rem;
+  background-color: red;
+
+  &-tasks {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 50rem;
+    width: 20rem;
+    background-color: blue;
+  }
 }
