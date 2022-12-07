@@ -4,6 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &-category {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
   
 
   & .renders {

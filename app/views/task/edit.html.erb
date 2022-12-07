@@ -2,7 +2,7 @@
   <%= render partial: "home/nav-task" %>
   <div class="edit-container">
     <h1>Editing task</h1>
-    <%= render "form", task: @task, category: @category %>
+    <%= render "form", task: @task %>
     <div class="edit-btn">
     <%#= link_to "Edit", edit_user_category_path(current_user, @category, task) %>
       <%= link_to "Back to task", authenticated_root_path %>

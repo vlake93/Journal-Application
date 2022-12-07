@@ -45,7 +45,7 @@ end
   end
 
   def get_task
-    @task = Category.find(params[:category_id])
+    @task = category.tasks
   end
 
   def task_params

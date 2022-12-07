@@ -3,6 +3,8 @@ class CategoryController < ApplicationController
 
   def index
     @category = current_user.categories.all
+    @tasks = current_user.tasks
+    @today = @tasks.where('date = ?', Date.current)
   end
 
   def new
