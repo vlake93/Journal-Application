@@ -17,14 +17,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(108, 108, 108);
     font-size: 2rem;
     background-color: black;
     height: 55rem;
     width: 55rem;
     border-radius: 1rem;
     padding: 2rem;
-    background: url("signin.jpg");
+    background: url("signin8.jpg");
     background-size: cover;
 
     & a:link, & a:visited {
@@ -34,6 +34,31 @@
       &:hover{
         text-decoration: underline;
       }
+    }
+
+    & .sign-up {
+      background: url("signup.jpg");
+      background-size: cover;  
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: white solid 2px;
+      border-radius: 1rem;
+      padding: 2rem;
+
+      & a {
+        margin-top: 2rem;
+        background-color: rgb(151, 79, 28);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        transition: all 1s;
+      }
+
+      & a:hover {
+        transform: scale(1.2);
+    }
     }
   }
 
@@ -59,7 +84,7 @@
       justify-content: center;
       align-items: center;
       padding: 0;
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
     }
 
     & input[type=checkbox] {
@@ -93,8 +118,8 @@
     
     & .boligrafo {
       position: absolute;
-      top: 2rem;
-      right: -86rem;
+      top: 0rem;
+      right: -97rem;
       font-size: 12rem;
       margin-left: 20rem;
       font-family: 'La Belle Aurore', cursive;
@@ -107,17 +132,23 @@
   }
 
   .dot {
-    font-size: 7 rem;
+    font-size: 12rem;
+    position: absolute;
+    top: -7.5rem;
+
   }
 
   .dot-one {
     animation: appear 4.25s forwards;
+    right: -4rem;
   }
   .dot-two {
     animation: appear 5.25s forwards;
+    right: -8rem;
   }
   .dot-three {
     animation: appear 6.25s forwards;
+    right: -12rem;
   }
 
   & .landing-footer {
@@ -143,6 +174,13 @@
       & img {
         height: 4rem;
       }
+    }
+    & .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
   }
 
