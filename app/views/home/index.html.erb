@@ -5,13 +5,22 @@
   </div>
   <div class="button-container">
   <h2>You have: <%= current_user.categories.count  %> categories</h2>
-    <div class="nav-buttons">
-      <%= image_tag("category.png", :alt => "category logo") %>
-      <%= link_to "Category", user_category_index_path(current_user) %>
-    </div>
-    <div class="nav-buttons">
-      <%= image_tag("task.png", :alt => "task logo") %>
-    </div>
+  <div class="nav-buttons">
+  <%= image_tag("home.png", :alt => "category logo") %>
+  <%= link_to "Home", authenticated_root_path %>
+</div>
+<div class="nav-buttons">
+  <%= image_tag("overview.png", :alt => "overview logo") %>
+  <%= link_to "Overview", authenticated_root_path %>
+</div>
+<div class="nav-buttons">
+  <%= image_tag("analytics.png", :alt => "analytics logo") %>
+  <%= link_to "Analytics", authenticated_root_path %>
+</div>
+<div class="nav-buttons">
+  <%= image_tag("controls.png", :alt => "controls logo") %>
+  <%= link_to "Settings", authenticated_root_path %>
+</div>
   </div>
   <div class="signout-container">
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>

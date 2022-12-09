@@ -8,13 +8,17 @@
       <%= link_to "Home", authenticated_root_path %>
     </div>
     <div class="nav-buttons">
-      <%= image_tag("task.png", :alt => "task logo") %>
+      <%= image_tag("overview.png", :alt => "overview logo") %>
+      <%= link_to "Overview", authenticated_root_path %>
     </div>
-      <% if @category.name == nil %>
-      <h2>Creating a new category for <%= current_user.name %></h2>
-      <% else %>
-      <h2><%= @category.name  %> has: <%= @category.tasks.count  %> tasks</h2>
-      <% end %>
+    <div class="nav-buttons">
+      <%= image_tag("analytics.png", :alt => "analytics logo") %>
+      <%= link_to "Analytics", authenticated_root_path %>
+    </div>
+    <div class="nav-buttons">
+      <%= image_tag("controls.png", :alt => "controls logo") %>
+      <%= link_to "Settings", authenticated_root_path %>
+    </div>
 
   </div>
   <div class="signout-container">

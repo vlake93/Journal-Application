@@ -9,7 +9,8 @@
     display: flex;
     gap: 2rem;
     padding: 2rem;
-    width: 65vw
+    width: 65vw;
+    margin-top: 10rem;
     
   }
   
@@ -23,7 +24,7 @@
     width: 90vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     // padding-right: 37rem;
     // padding-bottom: 25rem;
   }
@@ -55,15 +56,24 @@
     }
 
     & .nav-buttons {
-      padding: 1rem 0;
-      width: 25rem;
-      border-radius: 1rem;
-      background-color: grey;
+      padding: 1rem 8rem;
+      width: 31rem;
+      background-color: transparent;
+      // border-bottom: 2px solid white;
       display: flex;
-      justify-content: center;
+      // justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      
+      gap: 2rem;
+
+      & img  {
+        height: 4rem;
+      }
+
+      & a:link, &:visited {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+      }
 
       & p {
         font-size: 3rem;

@@ -17,15 +17,22 @@
   </div>
   
 </div>
+<div class="todays-tasks-container">
 
-<div class="todays">
-
+<div class="todays-tasks-header">
+    <h1>Task</h1>
+    <h1>Date</h1>
+</div>
 <div class="todays-tasks">
-<% current_user.tasks.each do |task| %>
-  <h2><%= task.name %></h2>
-  <h2><%= task.details %></h2>
-  <h2><%= task.date %></h2>
-  <h2><%#= task.where('date = ?', Date.current).name %></h2>
+  <% current_user.tasks.where('date = ?', Date.current).each do |task| %>
+  <div class="task-date">
+    <div>
+      <h2><%= task.name %></h2>
+      <h2>- <%= task.details %></h2>
+    </div>
+    <h2><%= task.date %></h2>
+  </div>
     <% end %>
     </div>
+</div>
 </div>

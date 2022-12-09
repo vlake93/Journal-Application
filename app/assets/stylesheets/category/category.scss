@@ -2,7 +2,7 @@
   padding: 0 3rem 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   // width: 55rem;
   // background-color: rgb(255, 210, 161);
@@ -58,6 +58,8 @@
   background: url("wood2.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+
+
   
   &-header {
     display: flex;
@@ -73,20 +75,48 @@
   }
 }
 
-.todays {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 3rem 3rem 0;
-  height: 60vh;
-  width: 35rem;
-  background-color: red;
 
-  &-tasks {
+  .todays-tasks {
+    padding: 3rem 3rem 3rem 0;
+    margin-left: 3rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
-    height: 50rem;
-    width: 20rem;
-    background-color: blue;
+    // flex-wrap: wrap;
+    // height: 50rem;
+    width: 50rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+
+    &-container {
+      // padding-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: flex-start;
+      font-family: 'Shadows Into Light', cursive;
+
+    }
+
+    &-header {
+      display: flex;
+      width: 50rem;
+      font-size: 2rem;
+      margin-top: 2.5rem;
+      justify-content: space-between;
+    }
+
+    & .task-date {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
   }
-}
+
+  .category-show .task-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
