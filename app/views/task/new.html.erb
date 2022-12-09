@@ -6,7 +6,7 @@
 </div>
 <div class="task-new-form">
 
-<h1> New task</h1>
+<h1 class="task-new-header"> New task</h1>
 
 <%= form_with scope: :task, url: create_task_path, local: true do |f| %>
   
@@ -45,7 +45,7 @@
 <% end %>
 
 
-<div>
+<div class="category-back">
 <%= link_to "Back", user_category_path(current_user, @category, @task) %>
 </div>
 </div>

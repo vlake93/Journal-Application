@@ -20,20 +20,21 @@
 <div class="todays-tasks-container">
 
 <div class="todays-tasks-header">
-    <h1>Task</h1>
-    <h1>Date</h1>
+    <h1>Tasks due today</h1>
 </div>
 <div class="todays-tasks">
   <% current_user.tasks.where('date = ?', Date.current).each do |task| %>
   <div class="task-date">
+  <div class="task-delete">
+      <h2>From: <%= task.category.name %></h2>
+    </div>
+    <div class="task-details">
     <div>
       <h2><%= task.name %></h2>
       <h2>- <%= task.details %></h2>
     </div>
-    <div class="task-delete">
-      <h2><%= task.date.strftime('%B %d, %Y')%></h2>
-      <%= link_to "Delete", delete_task_path(current_user, @category, task), class: "delete-task", data: { "turbo_method": "delete", "turbo_confirm": "Are you sure you want to delete this task? This can't be undone." } %>
-    </div>
+      <%= link_to image_tag("delete.png"), delete_task_path(current_user, @category, task), class: "delete-task", data: { "turbo_method": "delete", "turbo_confirm": "Are you sure you want to delete this task? This can't be undone." } %>
+      </div>
   </div>
     <% end %>
     </div>

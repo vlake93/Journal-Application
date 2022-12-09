@@ -105,6 +105,11 @@
     }
     & .signout-container {
       margin-top: 3rem;
+      
+      & button {
+        color: #dcad7b;
+        border: 2px solid white;
+      }
     }
   }
 

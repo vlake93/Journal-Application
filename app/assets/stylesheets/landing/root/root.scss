@@ -186,6 +186,78 @@
 
 }
 
+.signup-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("signup2.jpg");
+  background-size: cover;
+  font-size: 2rem;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & input[type=text],input[type=email],input[type=password] {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid black;
+      outline: none;
+      width: 40rem;
+    }
+
+    & input[type=submit] {
+      padding: 2rem;
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 1rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    & .password {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & label, em {
+        align-self: flex-start;
+      }
+    }
+
+  
+  }
+
+  & .register {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    & a:link, a:visited {
+      color: white;
+      text-decoration: none;
+      font-size: 3rem;
+      border: 2px solid black;
+      padding: 1.25rem;
+      border-radius: 1rem;
+    }
+
+    & p {
+      color: transparent;
+    }
+  }
+}
+
 
 
 @keyframes appear {
