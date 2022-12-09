@@ -6,6 +6,7 @@ class TaskTest < ActiveSupport::TestCase
     task = Task.new
     task.name = ""
     task.details = ""
+    category_id = ""
     assert_not task.save
   end
 
@@ -13,6 +14,7 @@ class TaskTest < ActiveSupport::TestCase
     task = Task.new
     task.name = "Grocery"
     task.details = "1L milk, 2 bananas"
+    category_id = 1
     assert task.save
   end
 

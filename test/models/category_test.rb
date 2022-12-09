@@ -5,6 +5,7 @@ class CategoryTest < ActiveSupport::TestCase
     category = Category.new
     category.name = ""
     category.details = ""
+    user_id = ""
     assert_not category.save
   end
 
@@ -12,6 +13,7 @@ class CategoryTest < ActiveSupport::TestCase
     category = Category.new
     category.name = "Movies"
     category.details = "Batman"
+    user_id = 1
     assert category.save
   end
 
