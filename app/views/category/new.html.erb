@@ -4,7 +4,7 @@
 <div>
  <%= render partial: "home/nav-category" %>
 </div>
-<div>
+<div class="new-category">
 <h1> New category</h1>
 
 <%= form_with scope: :category, url: create_category_path, local: true do |f| %>

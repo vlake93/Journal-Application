@@ -47,6 +47,9 @@
     height: 15rem;
     font-size: 2.5rem;
 
+    & img {
+      height: 2.5rem;
+    }
   }
 }
  
@@ -54,9 +57,20 @@
   display: flex;
 }
 
+.new-category {
+  border: 2px solid black;
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .category-show {
-  background: url("wood2.jpg") no-repeat;
-  background-position: center;
+  background: url("cork") no-repeat;
+  // background-position: center;
   background-size: cover;
 
 
@@ -101,7 +115,7 @@
 
     &-header {
       display: flex;
-      width: 50rem;
+      width: 42.5rem;
       font-size: 2rem;
       margin-top: 2.5rem;
       justify-content: space-between;
@@ -110,8 +124,16 @@
     & .task-date {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center; 
       
+    & .task-delete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 2rem;
+    }
+          
     }
   }
 
@@ -120,3 +142,4 @@
     flex-wrap: wrap;
     gap: 3rem;
   }
+

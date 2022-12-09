@@ -2,8 +2,6 @@
   <%= render partial: "home/nav-category" %>
   <div class="category-show-render">
   <div class="category-show-header">
-    <h1>Show category</h1>
-    <%= render "category/category" %>
     </div>
     <div>
     <%= render template: "task/index", locals: { tasks: @category.tasks } %>

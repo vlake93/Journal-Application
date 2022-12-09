@@ -1,5 +1,5 @@
 .task-index {
-  background: image-url('note5.png');
+  background: image-url('note10.png');
   background-size: cover;
   height: 20rem;
   width: 20rem;
@@ -10,15 +10,21 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-family: 'Shadows Into Light', cursive;
 
   & .index {
     margin-left: 2rem;
+
   }
 
   & .buttons {
     display: flex;
     gap: 2rem;
     margin-left: 2rem;
+
+    & img {
+      height: 2.5rem;
+    }
   }
 }
 
@@ -28,3 +34,65 @@
   font-family: 'Shadows Into Light', cursive;
 }
 
+.task-new {
+  
+  &-form {
+    border: 2px solid black;
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.edit-container{
+  border: 2px solid black;
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  & .edit-btn {
+    display: flex;
+    
+  }
+}
+
+.task-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  
+  & h1 {
+    font-size: 5rem;
+    color: white;
+  }
+
+  & a {
+    font-size: 2rem;
+
+    &:link, &:visited {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  & img {
+    height: 4rem
+  }
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}

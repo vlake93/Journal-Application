@@ -4,7 +4,6 @@
     <h2><%= current_user.name  %>'s Journal</h2>
   </div>
   <div class="button-container">
-  <h2>You have: <%= current_user.categories.count  %> categories</h2>
   <div class="nav-buttons">
   <%= image_tag("home.png", :alt => "category logo") %>
   <%= link_to "Home", authenticated_root_path %>
@@ -14,7 +13,7 @@
   <%= link_to "Overview", authenticated_root_path %>
 </div>
 <div class="nav-buttons">
-  <%= image_tag("analytics.png", :alt => "analytics logo") %>
+  <%= image_tag("analytic.png", :alt => "overview logo") %>
   <%= link_to "Analytics", authenticated_root_path %>
 </div>
 <div class="nav-buttons">
