@@ -2,8 +2,7 @@ class CategoryController < ApplicationController
   before_action :get_category, only: %i[show edit update destroy]
 
   def index
-    @category = current_user.categories.all
-  
+    @categories = current_user.categories.all
   end
 
   def new
